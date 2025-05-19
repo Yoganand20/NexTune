@@ -1,14 +1,16 @@
-import Navigation from './component/Navigation'
-import HomePage from './pages/HomePage'
+import Navigation from './component/navigation/Navigation'
 import Footer from './component/Footer'
-function App() {
 
+import { Outlet } from 'react-router'
+
+
+function App() {
 
   return (
     <>
       <Navigation />
-      <HomePage/>
-      <Footer/>
+      <Outlet/>
+      <Footer />
     </>
   )
 }

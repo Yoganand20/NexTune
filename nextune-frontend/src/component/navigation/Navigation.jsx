@@ -1,6 +1,13 @@
 import React from 'react'
-import { Heart, ShoppingCart, User, Search} from 'lucide-react'
+import { Heart, ShoppingCart, User, Search } from 'lucide-react'
+import { Link, NavLink } from 'react-router'
 
+const NavLinkStyle = ({ isActive, isPending, isTransitioning }) =>
+    [
+        isPending ? "text-red-600" : "",
+        isActive ? "font-bold underline" : "",
+        isTransitioning ? "animate-pulse" : "",
+    ].join(" ")
 
 function Navigation() {
     return (
@@ -20,13 +27,13 @@ function Navigation() {
                         <li>
                             <a>Categories</a>
                             <ul className="p-2">
-                                <li><a>IEM</a></li>
-                                <li><a>Headphons</a></li>
-                                <li><a>DACs and Amps</a></li>
-                                <li><a>Accessories</a></li>
+                                <li><NavLink to='/iem' className={NavLinkStyle}>IEM</NavLink></li>
+                                <li><NavLink to='/headphones' className={NavLinkStyle}>Headphons</NavLink></li>
+                                <li><NavLink to='/dacs_amps' className={NavLinkStyle}>DACs and Amps</NavLink></li>
+                                <li><NavLink to='/accessories' className={NavLinkStyle}>Accessories</NavLink></li>
                             </ul>
                         </li>
-                        <li><a>About</a></li>
+                        <li><Link to='/about'>About</Link></li>
                         <li><a>Help Center</a></li>
                     </ul>
                 </div>
@@ -42,39 +49,34 @@ function Navigation() {
                         <details>
                             <summary>Categories</summary>
                             <ul className="p-2">
-                                <li><a>IEM</a></li>
-                                <li><a>Headphons</a></li>
-                                <li><a>DACs and Amps</a></li>
-                                <li><a>Accessories</a></li>
+                                <li><NavLink to='/iem' className={NavLinkStyle}>IEM</NavLink></li>
+                                <li><NavLink to='/headphones' className={NavLinkStyle}>Headphons</NavLink></li>
+                                <li><NavLink to='/dacs_amps' className={NavLinkStyle}>DACs and Amps</NavLink></li>
+                                <li><NavLink to='/accessories' className={NavLinkStyle}>Accessories</NavLink></li>
                             </ul>
                         </details>
                     </li>
 
-                    <li><a>About</a></li>
+                    <li><NavLink to='/about' className={NavLinkStyle}>About</NavLink></li>
                     <li><a>Help Center</a></li>
                 </ul>
             </div>
 
             <div className="navbar-end flex gap-2">
                 {/* search bar */}
-                <Search size={18}/>
+                <Search size={18} />
 
                 <input type="text" placeholder="Search" className=" input-bordered w-24 md:w-auto outline-none" >
                 </input>
                 <ul className="flex px-1 gap-2">
-                    <li><a role="button" className="btn btn-ghost btn-circle avatar"><Heart size={18}/></a></li>
-                    <li><a role="button" className="btn btn-ghost btn-circle avatar"><ShoppingCart size={18}/></a></li>
+                    <li><a role="button" className="btn btn-ghost btn-circle avatar"><Heart size={18} /></a></li>
+                    <li><a role="button" className="btn btn-ghost btn-circle avatar"><ShoppingCart size={18} /></a></li>
                 </ul>
                 {/* dropdown menu */}
                 <div className="dropdown dropdown-end">
 
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                        <User size={18}/>
-                        {/* <div className="w-10 rounded-full">
-                            <img
-                                alt="Tailwind CSS Navbar component"
-                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                        </div> */}
+                        <User size={18} />
                     </div>
                     <ul
                         tabIndex={0}

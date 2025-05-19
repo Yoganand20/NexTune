@@ -1,6 +1,6 @@
 import React from 'react'
-import CarouselHeading from '../common/Carousel/CarouselHeading';
-import CarouselCards from '../common/Carousel/CarouselCards';
+import CarouselHeading from './CarouselHeading';
+import CarouselCards from './CarouselCards';
 
 import Moondroop from '../../assets/BrandLogo/moondrop_logo.svg';
 import Shure from '../../assets/BrandLogo/shure-logo.svg';

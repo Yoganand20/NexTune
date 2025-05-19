@@ -1,6 +1,6 @@
 import React from 'react'
-import CarouselCards from '../common/Carousel/CarouselCards'
-import CarouselHeading from '../common/Carousel/CarouselHeading'
+import CarouselCards from './CarouselCards'
+import CarouselHeading from './CarouselHeading'
 
 import TruthearZeroBlue2 from '../../assets/NewArrivals/Headphone-Zone-Truthear-x-Crinacle-ZERO-BLUE2-Without-mic-02.webp'
 import TangzeWanerSG2 from '../../assets/NewArrivals/Headphone-Zone-Tangze-Waner-SG-2-Black-4.4mm-Without-Mic-103.webp'
