@@ -16,5 +16,5 @@ CREATE TABLE wishlist_items (
     FOREIGN KEY (wishlist_id) REFERENCES wishlists(id) ON DELETE CASCADE,  
     FOREIGN KEY (variant_id) REFERENCES variants(variant_id) ON DELETE CASCADE,  
     FOREIGN KEY (product_id) REFERENCES products(product_id) ON DELETE CASCADE,  
-    UNIQUE KEY unique_wishlist_variant (wishlist_id, variant_id)  
+    UNIQUE KEY unique_wishlist_variant (wishlist_id, product_id, variant_id)
 );
